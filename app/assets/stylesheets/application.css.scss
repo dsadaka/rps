@@ -11,13 +11,9 @@
  *= require_self
  *= require_tree .
  */
-#moves ul {
-  list-style: none;
-}
-#moves li:hover {
-  opacity: 0.5;
-}
 #moves:hover li {
    opacity: 0.9;
 }
-
+#moves .button:hover {
+   opacity: 0.5;
+}

@@ -9,31 +9,21 @@
         <h3 class="panel-title">You<br></h3>
       </div>
       <div class="panel-body">
-        <%= image_tag("paperL.jpg", class: "pull-left", id: "player_img") %>
+        <%= image_tag("paperL.jpg", class: "pull-left", id: "player-img", width: 200, height: 300) %>
       </div>
   </div>
   <div id="moves" class="panel panel-default pull-left column-moves">
     <div class="panel-heading text-center">
-        <h3 class="panel-title">Select Move<br></h3>
+        <h3 class="panel-title">Move<br></h3>
     </div>
-    <ul>
-      <li>
-        <%= image_tag("rockBtn.jpg", height: 55, width: 55) %>
-      </li>
-        <%= image_tag("handBtn.jpg", height: 55, width: 55) %>
-      </li>
-        <%= image_tag("scissorsBtn.jpg", height: 55, width: 55) %>
-      </li>
-
-    </ul>
-    <div class="button" style="padding-top: 60px;">
-      <%= image_tag("rockBtn.jpg", height: 55, width: 55) %>
+    <div class="button" data-move='rock' style="padding-top: 60px;">
+      <a href=""><%= image_tag("rockBtn.jpg", height: 55, width: 55, alt: 'Rock', id: 'rock-btn', :'data-move' => 'rock') %></a>
     </div>
-    <div class="button">
-      <%= image_tag("handBtn.jpg", height: 55, width: 55) %>
+    <div class="button" data-move='paper' >
+      <%= image_tag("handBtn.jpg", height: 55, width: 55, alt: 'Hand', id: 'hand-btn') %>
     </div>
-    <div class="button">
-      <%= image_tag("scissorsBtn.jpg", height: 55, width: 55) %>
+    <div class="button" data-move='scissors' >
+      <%= image_tag("scissorsBtn.jpg", height: 55, width: 55, alt: 'Scissors', id: 'scissors-btn') %>
     </div>
 
   </div>
@@ -44,6 +34,6 @@
     <h3 class="panel-title">Opponent</h3>
   </div>
   <div class="panel-body">&nbsp;
-    <%= image_tag("paperR.jpg", class: "pull-left", id: "opponent_img") %>
+    <%= image_tag("paperR.jpg", class: "pull-left", id: "opponent-img", width: 200, height: 300) %>
   </div>
 </div></div>

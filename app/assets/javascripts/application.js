@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+$("a").on('click', function() {
+    alert("You clicked " + this.data("move"));
+} )
