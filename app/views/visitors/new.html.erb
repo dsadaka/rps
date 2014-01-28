@@ -1,39 +1,55 @@
 <h3>Play</h3>
 
 <div class="container">
-  <h3 class="text-center">Play Rock, Paper Scissors!<br></h3>
+  <div id="player-panel" class="panel center">
+      <div class="panel-heading text-center">
+        <h3 class="text-center">Play Rock, Paper Scissors!<br></h3>
+      </div>
+  </div>
 </div>
-<div class="container">
-  <div class="column panel panel-default pull-left">
+<div class="container center">
+  <div id="player-panel" class="column panel panel-default pull-left">
       <div class="panel-heading text-center">
         <h3 class="panel-title">You<br></h3>
       </div>
       <div class="panel-body">
         <%= image_tag("paperL.jpg", class: "pull-left", id: "player-img", width: 200, height: 300) %>
       </div>
+    <div class="panel-footer" "text-center">
+      Score: <span id="player-score">0</span>
+    </div>
   </div>
-  <div id="moves" class="panel panel-default pull-left column-moves">
+  <div id="moves" class="panel panel-default pull-left column">
     <div class="panel-heading text-center">
         <h3 class="panel-title">Move<br></h3>
     </div>
-    <div class="button" data-move='rock' style="padding-top: 60px;">
-      <a href=""><%= image_tag("rockBtn.jpg", height: 55, width: 55, alt: 'Rock', id: 'rock-btn', :'data-move' => 'rock') %></a>
+    <div class="panel-body">
+      <div class="button" style="padding-top: 60px;">
+        <%= image_tag("rockBtn.jpg", height: 55, width: 55, alt: 'Rock', :'data-move' => 'rock') %>
+      </div>
+      <div class="button" >
+        <%= image_tag("handBtn.jpg", height: 55, width: 55, alt: 'Paper', :'data-move' => 'paper') %>
+      </div>
+      <div class="button" style="padding-bottom: 45px;">
+        <%= image_tag("scissorsBtn.jpg", height: 55, width: 55, alt: 'Scissors', :'data-move' => 'scissors') %>
+      </div>
     </div>
-    <div class="button" data-move='paper' >
-      <%= image_tag("handBtn.jpg", height: 55, width: 55, alt: 'Hand', id: 'hand-btn') %>
+    <div class="panel-footer text-center">
+      <span id="who-won">&nbsp</span>
     </div>
-    <div class="button" data-move='scissors' >
-      <%= image_tag("scissorsBtn.jpg", height: 55, width: 55, alt: 'Scissors', id: 'scissors-btn') %>
-    </div>
-
   </div>
 
-  <div class="column panel panel-default pull-left">
+  <div id="opponent-panel" class="column panel panel-default pull-left">
 
-  <div class="panel-heading text-center">
-    <h3 class="panel-title">Opponent</h3>
+    <div class="panel-heading text-center">
+        <h3 class="panel-title">Opponent</h3>
+    </div>
+    <div class="panel-body">
+        <%= image_tag("paperR.jpg", class: "pull-left", id: "opponent-img", width: 200, height: 300) %>
+    </div>
+    <div class="panel-footer text-center">
+      Score: <span id="opponent-score">0</span>
+    </div>
   </div>
-  <div class="panel-body">&nbsp;
-    <%= image_tag("paperR.jpg", class: "pull-left", id: "opponent-img", width: 200, height: 300) %>
-  </div>
-</div></div>
+
+</div>

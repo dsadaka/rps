@@ -14,22 +14,28 @@ img {
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
-.panel-body {
-  height: 300
-}
+//.panel-body  {
+//  height: inherit;
+//  background: inherit;
+//}
+//
+//.panel {
+//  height: 350px
+//}
 
 .column {
-  @extend .col-lg-2;
+  //@extend .col-lg-2;
   @extend .text-center;
   padding-left: 1px;
   padding-right: 1px;
+  //height: 330px;
   }
 .column-moves {
-  @extend .col-lg-1;
+  //@extend .col-lg-1;
   @extend .text-center;
   padding-left: 1px;
   padding-right: 1px;
-  height: 371px;
+  //height: 330px;
   }
 .form {
   @extend .col-md-6;
